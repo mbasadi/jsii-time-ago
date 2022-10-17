@@ -10,6 +10,7 @@ const project = new cdk.JsiiProject({
     distName: 'jsii-time-ago-py',
     module: 'jsii-time-ago-py',
   },
+  docgen: false,
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],             /* Build dependencies for this module. */
