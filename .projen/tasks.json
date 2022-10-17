@@ -100,15 +100,6 @@
         }
       ]
     },
-    "docgen": {
-      "name": "docgen",
-      "description": "Generate API.md from .jsii manifest",
-      "steps": [
-        {
-          "exec": "jsii-docgen -o API.md"
-        }
-      ]
-    },
     "eject": {
       "name": "eject",
       "description": "Remove projen from the project",
@@ -145,6 +136,9 @@
       "steps": [
         {
           "spawn": "package:js"
+        },
+        {
+          "spawn": "package:python"
         }
       ]
     },
@@ -157,14 +151,18 @@
         }
       ]
     },
-    "post-compile": {
-      "name": "post-compile",
-      "description": "Runs after successful compilation",
+    "package:python": {
+      "name": "package:python",
+      "description": "Create python language bindings",
       "steps": [
         {
-          "spawn": "docgen"
+          "exec": "jsii-pacmak -v --target python"
         }
       ]
+    },
+    "post-compile": {
+      "name": "post-compile",
+      "description": "Runs after successful compilation"
     },
     "post-upgrade": {
       "name": "post-upgrade",
@@ -176,7 +174,7 @@
     },
     "release": {
       "name": "release",
-      "description": "Prepare a release from \"main\" branch",
+      "description": "Prepare a release from \"master\" branch",
       "env": {
         "RELEASE": "true"
       },
