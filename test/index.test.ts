@@ -1,4 +1,4 @@
-import timeAgo from '../src';
+import TimeAgo from '../src';
 
 const timeDifferences = [
   -100,
@@ -37,6 +37,6 @@ const cases:[number, string][]=timeDifferences.map((time, index)=>{
 });
 describe('Relative times', () => {
   test.each(cases)('Given a date with %p milliseconds relative time difference shows as %p', (time, expectedResult)=>{
-    return expect(timeAgo(time)).toEqual(expectedResult);
+    return expect(TimeAgo.timeAgo(time)).toEqual(expectedResult);
   });
 });
