@@ -103,8 +103,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "jsii-time-ago-py",
-        "module": "jsii-time-ago-py"
+        "distName": "jsiiTimeAgo",
+        "module": "jsiiTimeAgo"
       }
     },
     "tsc": {
