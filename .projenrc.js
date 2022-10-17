@@ -7,8 +7,8 @@ const project = new cdk.JsiiProject({
   repositoryUrl: 'https://github.com/mbasadi/jsii-time-ago.git',
   defaultReleaseBranch: 'master',
   publishToPypi: {
-    distName: 'jsiiTimeAgo',
-    module: 'jsiiTimeAgo',
+    distName: 'jsii-time-ago-py',
+    module: 'jsii-time-ago-py',
   },
   docgen: false,
   // deps: [],                /* Runtime dependencies of this module. */
